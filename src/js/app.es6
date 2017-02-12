@@ -1,1 +1,5 @@
-console.log('hello, world!')
+const write = () => {
+  document.write('hello, town!')
+}
+
+write()

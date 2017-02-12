@@ -1,7 +1,9 @@
 {
   "scripts": {
     "build": "yarn run build:js",
-    "build:js": "webpack"
+    "build:js": "webpack",
+    "watch": "yarn run watch:js",
+    "watch:js": "yarn run build:js -- -w"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
