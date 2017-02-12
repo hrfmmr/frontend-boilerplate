@@ -1,0 +1,6 @@
+{
+  "sourceMaps": "inline",
+  "plugins": [
+      "transform-react-jsx"
+  ]
+}

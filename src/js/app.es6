@@ -1,5 +1,10 @@
-const write = () => {
-  document.write('hello, town!')
-}
+import React from 'react';
+import { render } from 'react-dom'
 
-write()
+const App = () => (
+  <div>
+    hello, react
+  </div>
+)
+
+render(<App />, document.getElementById('root'))
