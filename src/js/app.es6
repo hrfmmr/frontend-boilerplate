@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 
 const App = () => (
   <div>
-    yo
+    <button className="button button--red">Button</button>
   </div>
 )
 

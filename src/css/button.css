@@ -1,0 +1,8 @@
+.button {
+  cursor: pointer;
+
+  &--red {
+    color: #fff;
+    background-color: var(--red);
+  }
+}
