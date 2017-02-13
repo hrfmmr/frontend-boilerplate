@@ -1,9 +1,13 @@
-module.exports = {
+import webpack from 'webpack'
+
+export default {
   entry: './src/js/app.es6',
+
   output: {
     path: 'app',
     filename: 'bundle.js'
   },
+
   module: {
     rules: [
       {
@@ -12,5 +16,12 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    })
+  ]
 }
