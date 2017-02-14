@@ -3,6 +3,7 @@
     "build": "yarn run build:js",
     "build:css": "postcss --config .postcssrc.json",
     "build:js": "webpack",
+    "build:js:production": "NODE_ENV=production webpack --config webpack.production.config.babel.js",
     "serve": "browser-sync start --server 'app' --port 4444 --files 'app'",
     "watch": "yarn run watch:css & yarn run watch:js & yarn run serve",
     "watch:css": "yarn run build:css -- --watch --map",
@@ -20,7 +21,8 @@
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-nested": "^1.0.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-merge": "^2.6.1"
   },
   "dependencies": {
     "react": "^15.4.2",

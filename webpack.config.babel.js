@@ -1,5 +1,3 @@
-import webpack from 'webpack'
-
 export default {
   entry: './src/js/app.es6',
 
@@ -17,8 +15,4 @@ export default {
       }
     ]
   },
-
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin()
-  ]
 }
