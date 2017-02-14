@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "yarn run build:js",
+    "build": "yarn run build:css & yarn run build:js",
     "build:css": "postcss --config .postcssrc.json",
     "build:js": "webpack",
     "build:js:production": "NODE_ENV=production webpack --config webpack.production.config.babel.js",
