@@ -26,7 +26,7 @@ $ yarn run watch
 - [x] production build
 - [x] async/await
 - [ ] flowtype  
-    - [ ] five-simple-examples
-    - [ ] classインスタンスメソッドへの型指定
-    - [ ] 独自クラスインスタンスの型指定
+    - [x] five-simple-examples
+    - [ ] React Component  
+        * https://flowtype.org/docs/react.html#_
 - [ ] ava
