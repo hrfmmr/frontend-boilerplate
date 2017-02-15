@@ -25,5 +25,8 @@ $ yarn run watch
 - [x] postcss
 - [x] production build
 - [x] async/await
-- [ ] flowtype
+- [ ] flowtype  
+    - [ ] five-simple-examples
+    - [ ] classインスタンスメソッドへの型指定
+    - [ ] 独自クラスインスタンスの型指定
 - [ ] ava
