@@ -54,7 +54,9 @@ rules:
     - error
     - allowKeywords: true
   eol-last: 'off'
-  eqeqeq: error
+  eqeqeq:
+    - error
+    - smart
   func-names: off
   func-style: off
   generator-star-spacing: error
@@ -102,7 +104,6 @@ rules:
   no-duplicate-imports: error
   no-else-return: error
   no-empty-function: 'off'
-  no-eq-null: error
   no-eval: error
   no-extend-native: error
   no-extra-bind: error
