@@ -5,6 +5,12 @@
 [include]
 
 [libs]
+decls/
+interfaces/
 
 [options]
 module.file_ext=.es6
+module.file_ext=.js
+module.system.node.resolve_dirname=src
+esproposal.class_static_fields=enable
+munge_underscores=true

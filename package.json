@@ -6,7 +6,7 @@
     "build:js:production": "NODE_ENV=production webpack --config webpack.production.config.babel.js",
     "flow": "flow",
     "lint": "eslint src",
-    "serve": "browser-sync start --server 'app' --port 4444 --files 'app'",
+    "serve": "browser-sync start --server 'app' --port 4444 --files 'app' --no-open",
     "watch": "yarn run watch:css & yarn run watch:js & yarn run serve",
     "watch:css": "yarn run build:css -- --watch --map",
     "watch:js": "yarn run build:js -- -w"
