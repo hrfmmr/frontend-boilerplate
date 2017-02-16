@@ -15,4 +15,8 @@ export default {
       }
     ]
   },
+
+  resolve: {
+    extensions: ['.js', '.es6']
+  }
 }
