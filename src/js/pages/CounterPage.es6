@@ -1,6 +1,7 @@
+/* @flow */
 import { connect } from 'react-redux'
 
-import { increment, decrement } from '../actions/counter'
+import { increment, incrementBy } from '../actions/counter'
 import Counter from '../components/Counter'
 
 function mapStateToProps(state) {
@@ -14,8 +15,8 @@ function mapDispatchToProps(dispatch) {
     handleIncrement: () => {
       dispatch(increment())
     },
-    handleDecrement: () => {
-      dispatch(decrement())
+    handleIncrementBy: () => {
+      dispatch(incrementBy(10))
     },
   }
 }

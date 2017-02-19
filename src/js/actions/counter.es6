@@ -1,13 +1,17 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes'
+/* @flow */
+import { INCREMENT_COUNTER, INCREMENT_COUNTER_BY } from '../constants/ActionTypes'
 
-export function increment() {
+export function increment(): CountUpAction {
   return {
     type: INCREMENT_COUNTER
   }
 }
 
-export function decrement() {
+export function incrementBy(num: number): CountUpByAction {
   return {
-    type: DECREMENT_COUNTER
+    type: INCREMENT_COUNTER_BY,
+    payload: {
+      num
+    },
   }
 }
