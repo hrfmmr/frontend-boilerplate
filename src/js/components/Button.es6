@@ -1,17 +1,20 @@
 /* @flow */
-import React, { Component, Element } from 'react'
+import React, { Component } from 'react'
 
-export default class Button extends Component {
-  props: {
+type Props = {
     content: string,
     handleClick: (e: Event) => void,
-    children?: Element<*>,
-  }
-  state: {
-    count: number
-  }
+}
 
-  constructor(props: ButtonProps) {
+type State = {
+  count: number,
+}
+
+export default class Button extends Component {
+  props: Props
+  state: State
+
+  constructor(props: Props) {
     super(props)
     this.state = {
       count: 0,
@@ -19,29 +22,12 @@ export default class Button extends Component {
   }
 
   render() {
-    const {
-      content,
-      handleClick,
-      children,
-    } = this.props
+    const { content, handleClick, } = this.props
 
     return (
-      <div>
-        <button
-          className="button button--red"
-          onClick={(e) => {
-          handleClick(e)
-
-          // TEST CODE
-          // should not update own state in child component itself
-          this.setState({
-            count: this.state.count + 1
-          })
-        }}>
-          {`${content} - ${this.state.count}`}
-        </button>
-        {children}
-      </div>
+      <button className="button button--red" onClick={handleClick}>
+        {content}
+      </button>
     )
   }
 }
