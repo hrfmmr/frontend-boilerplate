@@ -7,7 +7,9 @@ export default class Button extends Component {
     handleClick: (e: Event) => void,
     children?: Element<*>,
   }
-  state: ButtonState
+  state: {
+    count: number
+  }
 
   constructor(props: ButtonProps) {
     super(props)
