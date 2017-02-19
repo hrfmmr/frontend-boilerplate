@@ -1,15 +1,21 @@
 /* @flow */
 import React, { Component, Element } from 'react'
 
-export default class Button extends Component {
-  props: {
+type Props = {
     content: string,
     handleClick: (e: Event) => void,
     children?: Element<*>,
-  }
-  state: ButtonState
+}
 
-  constructor(props: ButtonProps) {
+type State = {
+  count: number
+}
+
+export default class Button extends Component {
+  props: Props
+  state: State
+
+  constructor(props: Props) {
     super(props)
     this.state = {
       count: 0,
