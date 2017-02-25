@@ -1,5 +1,5 @@
 export default {
-  entry: './src/js/app.es6',
+  entry: './src/js/index.es6',
 
   output: {
     path: 'app',

@@ -43,6 +43,8 @@
     "react-addons-test-utils": "^15.4.2",
     "sinon": "^1.17.7",
     "tap-nyan": "^1.1.0",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
     "webpack": "^2.2.1",
     "webpack-merge": "^2.6.1"
   },
