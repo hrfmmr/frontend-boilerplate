@@ -4,7 +4,6 @@ import React, { Component, Element } from 'react'
 type Props = {
     content: string,
     handleClick: (e: Event) => void,
-    children?: Element<*>,
 }
 
 type State = {
@@ -22,30 +21,27 @@ export default class Button extends Component {
     }
   }
 
+
   render() {
     const {
       content,
       handleClick,
-      children,
     } = this.props
 
     return (
-      <div>
-        <button
-          className="button button--red"
-          onClick={(e) => {
-          handleClick(e)
+      <button
+        className="button button--red"
+        onClick={(e) => {
+        handleClick(e)
 
-          // TEST CODE
-          // should not update own state in child component itself
-          this.setState({
-            count: this.state.count + 1
-          })
-        }}>
-          {`${content} - ${this.state.count}`}
-        </button>
-        {children}
-      </div>
+        // TEST CODE
+        // should not update own state in child component itself
+        this.setState({
+          count: this.state.count + 1
+        })
+      }}>
+        {`${content} - ${this.state.count}`}
+      </button>
     )
   }
 }

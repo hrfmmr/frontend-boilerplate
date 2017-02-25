@@ -7,7 +7,7 @@
     "flow": "flow",
     "lint": "eslint src",
     "serve": "browser-sync start --server 'app' --port 4444 --files 'app' --no-open",
-    "test": "ava -v",
+    "test": "ava -v --tap | tap-nyan",
     "test:watch": "yarn run test -- --watch",
     "watch": "yarn run watch:css & yarn run watch:js & yarn run serve",
     "watch:css": "yarn run build:css -- --watch --map",
@@ -19,6 +19,7 @@
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "babel-plugin-module-resolver": "^2.5.0",
     "babel-plugin-transform-async-to-generator": "^6.22.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-react-jsx": "^6.22.0",
@@ -27,7 +28,9 @@
     "babel-register": "^6.23.0",
     "browser-sync": "^2.18.7",
     "cssnano": "^3.10.0",
+    "enzyme": "^2.7.1",
     "eslint": "^3.15.0",
+    "eslint-import-resolver-babel-module": "^3.0.0",
     "eslint-plugin-flowtype": "^2.30.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.2 || ^4.0.0",
@@ -37,6 +40,9 @@
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-nested": "^1.0.0",
+    "react-addons-test-utils": "^15.4.2",
+    "sinon": "^1.17.7",
+    "tap-nyan": "^1.1.0",
     "webpack": "^2.2.1",
     "webpack-merge": "^2.6.1"
   },
@@ -46,7 +52,9 @@
   },
   "ava": {
     "require": [
-      "babel-register"
-    ]
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": "inherit"
   }
 }

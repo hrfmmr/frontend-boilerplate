@@ -5,8 +5,6 @@ env:
 extends:
   - eslint:recommended
   - plugin:flowtype/recommended
-  - plugin:import/errors
-  - plugin:import/warnings
   - plugin:jsx-a11y/recommended
   - plugin:react/recommended
 parserOptions:
@@ -221,3 +219,6 @@ rules:
   yield-star-spacing: error
   yoda: error
   react/jsx-uses-vars: error
+settings: 
+  import/resolver: 
+    babel-module: {}
