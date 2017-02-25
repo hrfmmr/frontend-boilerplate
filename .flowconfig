@@ -6,6 +6,7 @@
 
 [libs]
 decls/
+interfaces/
 
 [options]
 module.file_ext=.es6
