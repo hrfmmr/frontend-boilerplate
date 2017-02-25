@@ -2,24 +2,23 @@ import test from 'ava'
 import { render, shallow } from 'enzyme'
 import { spy } from 'sinon'
 import React from 'react'
-import Button from '../src/js/components/Button.es6'
+import SimpleButton from './fixtures/SimpleButton.es6'
 
 test('renders one <button>', (t) => {
-  const wrapper = shallow(<Button />)
+  const wrapper = shallow(<SimpleButton />)
 
   t.is(wrapper.find('button').length, 1)
 })
 
-test('renders with .button .button--red classes', (t) => {
-  const wrapper = shallow(<Button />)
+test('renders with .button classes', (t) => {
+  const wrapper = shallow(<SimpleButton />)
 
   t.is(wrapper.find('.button').length, 1)
-  t.is(wrapper.find('.button--red').length, 1)
 })
 
 test('rendered HTML', (t) => {
   const content = 'button'
-  const button = (<Button content={content} />)
+  const button = (<SimpleButton content={content} />)
   const shallowWrapper = shallow(button)
   const cheerioWrapper = render(button)
 
@@ -41,7 +40,7 @@ test('rendered HTML', (t) => {
 
 test('state of count incremented via handleClick', (t) => {
   const handleClickSpy = spy()
-  const wrapper = shallow(<Button handleClick={handleClickSpy} />)
+  const wrapper = shallow(<SimpleButton handleClick={handleClickSpy}/>)
   const initialCount = wrapper.state('count')
 
   wrapper.find('button').simulate('click')
