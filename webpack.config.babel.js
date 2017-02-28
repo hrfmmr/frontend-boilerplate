@@ -9,7 +9,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.es6$/,
+        test: /\.(js|jsx|es6)$/,
         use: 'babel-loader',
         exclude: /node_modules/
       }
@@ -17,6 +17,6 @@ export default {
   },
 
   resolve: {
-    extensions: ['.js', '.es6']
+    extensions: ['', '.js', '.jsx', '.es6']
   }
 }

@@ -7,6 +7,7 @@
     "flow": "flow",
     "lint": "eslint src",
     "serve": "browser-sync start --server 'app' --port 4444 --files 'app' --no-open",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "ava -v",
     "test:nyan": "ava --tap | tap-nyan",
     "test:watch": "yarn run test -- --watch",
@@ -15,6 +16,7 @@
     "watch:js": "yarn run build:js -- -w"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
     "autoprefixer": "^6.7.2",
     "ava": "^0.18.2",
     "babel-core": "^6.22.1",

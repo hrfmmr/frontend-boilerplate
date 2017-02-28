@@ -7,7 +7,7 @@
     "transform-flow-strip-types",
     [
       "module-resolver", {
-        "root": ["./src"],
+        "root": ["./src", "./app"],
         "extensions": [".js", ".es6"]
     }]
   ]
