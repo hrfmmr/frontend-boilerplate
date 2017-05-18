@@ -17,6 +17,6 @@ export default {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.es6']
+    extensions: ['.js', '.jsx', '.es6']
   }
 }
