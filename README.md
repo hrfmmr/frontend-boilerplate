@@ -1,5 +1,3 @@
-## boilerplate for front-end project
-
 ## set up
 
 ```
@@ -18,15 +16,8 @@ $ yarn run build
 $ yarn run watch
 ```
 
-## TODO
+## test
 
-- [x] es2015
-- [x] react
-- [x] postcss
-- [x] production build
-- [x] async/await
-- [ ] flowtype  
-    - [x] five-simple-examples
-    - [ ] React Component  
-        * https://flowtype.org/docs/react.html#_
-- [ ] ava
+```
+$ yarn test
+```
