@@ -1,5 +1,5 @@
 export default {
-  entry: './src/js/index.es6',
+  entry: ['babel-polyfill', './src/js/index.es6'],
 
   output: {
     path: 'app',
