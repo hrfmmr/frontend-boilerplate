@@ -1,9 +1,11 @@
+import path from 'path';
+
 export default {
   entry: ['babel-polyfill', './src/js/index.es6'],
 
   output: {
-    path: 'app',
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'app'),
+    filename: 'bundle.js',
   },
 
   module: {
@@ -11,12 +13,12 @@ export default {
       {
         test: /\.(js|jsx|es6)$/,
         use: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.es6']
-  }
-}
+    extensions: ['.js', '.jsx', '.es6'],
+  },
+};
