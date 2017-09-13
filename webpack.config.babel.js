@@ -1,12 +1,20 @@
-import path from 'path'
+const webpack = require('webpack')
+const path = require('path')
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
-export default {
-  entry: ['babel-polyfill', './src/js/index.js'],
+module.exports = {
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    './src/js/index.js',
+  ],
 
   output: {
-    path: path.join(__dirname, 'app'),
+    path: path.join(__dirname, 'static'),
     filename: 'bundle.js',
+    publicPath: '/static/',
   },
 
   module: {
@@ -16,10 +24,24 @@ export default {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader',
+          ],
+        })),
+      },
     ],
   },
 
+  plugins: [
+    new ExtractTextPlugin('bundle.css'),
+  ],
+
   resolve: {
-    extensions: ['.js', '.jsx', '.es6'],
+    extensions: ['.js', '.jsx', '.css'],
   },
 }

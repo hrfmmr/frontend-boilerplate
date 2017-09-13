@@ -1,6 +1,7 @@
 {
-  "sourceMaps": "inline",
-  "presets": ["es2015"],
+  "presets": [
+      ["es2015", { "modules": false }]
+  ],
   "plugins": [
     "transform-async-to-generator",
     "transform-class-properties",
@@ -12,6 +13,7 @@
       "alias": {
         "src": "./src/js"
       }
-    }]
+    }],
+    "react-hot-loader/babel"
   ]
 }
