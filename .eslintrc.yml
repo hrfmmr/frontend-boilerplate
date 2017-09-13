@@ -8,6 +8,19 @@ extends:
 plugins:
   - flowtype
 rules:
+  react/sort-comp:
+    - 2
+    - order:
+      - type-annotations
+      - static-methods
+      - everything-else
+      - lifecycle
+      - /^on.+$/
+      - rendering
+      groups:
+        rendering:
+          - /^render.+$/
+          - render
   semi:
     - error
     - never
