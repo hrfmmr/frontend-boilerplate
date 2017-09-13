@@ -1,7 +1,8 @@
-import path from 'path';
+import path from 'path'
+
 
 export default {
-  entry: ['babel-polyfill', './src/js/index.es6'],
+  entry: ['babel-polyfill', './src/js/index.js'],
 
   output: {
     path: path.join(__dirname, 'app'),
@@ -21,4 +22,4 @@ export default {
   resolve: {
     extensions: ['.js', '.jsx', '.es6'],
   },
-};
+}

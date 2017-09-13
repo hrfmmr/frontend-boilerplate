@@ -1,15 +1,18 @@
 /* @flow */
-import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 
-import Button from 'js/components/Button'
+import Button from 'src/components/Button'
+
 
 const App = () => (
   <div>
-    <Button content={'button'} handleClick={() => {
-      console.log('clicked')
-    }}/>
+    <Button
+      content={'button'}
+      handleClick={() => {
+        console.log('clicked')
+      }}
+    />
   </div>
 )
 

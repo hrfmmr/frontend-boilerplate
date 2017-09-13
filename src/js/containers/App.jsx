@@ -1,6 +1,7 @@
 import React from 'react'
 
-import CounterPage from '../pages/CounterPage'
+import CounterPage from 'src/pages/CounterPage'
+
 
 export default function App() {
   return (

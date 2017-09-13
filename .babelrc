@@ -7,10 +7,11 @@
     "transform-object-rest-spread",
     "transform-react-jsx",
     "transform-flow-strip-types",
-    [
-      "module-resolver", {
-        "root": ["./src", "./app"],
-        "extensions": [".js", ".es6"]
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "src": "./src/js"
+      }
     }]
   ]
 }

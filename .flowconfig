@@ -9,9 +9,9 @@ decls/
 interfaces/
 
 [options]
-module.file_ext=.es6
 module.file_ext=.js
+module.file_ext=.jsx
 module.system.node.resolve_dirname=src
-module.name_mapper='^js/\(.*\)$' -> '<PROJECT_ROOT>/js/\1'
+module.name_mapper='^src\/\(.*\)$' -> '<PROJECT_ROOT>/src/js/\1'
 esproposal.class_static_fields=enable
 munge_underscores=true

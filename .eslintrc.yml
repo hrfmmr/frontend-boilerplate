@@ -7,3 +7,10 @@ extends:
   - plugin:flowtype/recommended
 plugins:
   - flowtype
+rules:
+  semi:
+    - error
+    - never
+settings:
+  import/resolver:
+    babel-module: {}

@@ -1,6 +1,9 @@
+/* eslint-disable */
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import Button from 'js/components/Button'
+
+import Button from 'src/components/Button'
+
 
 storiesOf('Button', module)
   .add('hello', () => (

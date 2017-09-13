@@ -1,8 +1,11 @@
+/* eslint-disable */
 import test from 'ava'
 import { render, shallow } from 'enzyme'
 import { spy } from 'sinon'
 import React from 'react'
-import SimpleButton from './fixtures/SimpleButton.es6'
+
+import SimpleButton from './fixtures/SimpleButton'
+
 
 test('renders one <button>', (t) => {
   const wrapper = shallow(<SimpleButton />)

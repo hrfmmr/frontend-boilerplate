@@ -1,13 +1,14 @@
 import test from 'ava'
-import calculate from '../src/js/utils/divided.es6'
-import promiseFn from '../src/js/utils/promiseFn.es6'
+
+import calculate from 'src/utils/divided'
+import promiseFn from 'src/utils/promiseFn'
+
 
 test('divided#calculate returns 2 when the value is 4', (t) => {
   t.is(calculate(4), 2)
 })
 
 test('divided#calculate returns 1 when the value is 3', (t) => {
-
   /*
   * t.is(calculate(3), 1.5)
   */
