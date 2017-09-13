@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "yarn run build:css & yarn run build:js",
-    "build:css": "postcss --config .postcssrc.json",
+    "build:css": "postcss src/css/app.css -d app",
     "build:js": "webpack",
     "build:js:production": "NODE_ENV=production webpack --config webpack.production.config.babel.js",
     "flow": "flow",
@@ -45,7 +45,8 @@
     "flow-bin": "^0.39.0",
     "jsdom": "^9.11.0",
     "jsdom-global": "^2.1.1",
-    "postcss-cli": "^2.6.0",
+    "postcss": "^5.2.17",
+    "postcss-cli": "^3.1.1",
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-nested": "^1.0.0",
