@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "build": "yarn run build:css & yarn run build:js",
-    "build:css": "postcss src/css/app.css -d app",
+    "build": "yarn run build:js",
     "build:js": "webpack",
     "build:js:production": "NODE_ENV=production webpack --config webpack.production.config.babel.js",
     "flow": "flow",
@@ -11,8 +10,7 @@
     "test": "ava -v",
     "test:nyan": "ava --tap | tap-nyan",
     "test:watch": "yarn run test -- --watch",
-    "watch": "yarn run watch:css & yarn run watch:js",
-    "watch:css": "yarn run build:css -- --watch --map",
+    "watch": "yarn run watch:js",
     "watch:js": "yarn run build:js -- -w"
   },
   "devDependencies": {
