@@ -1,19 +1,17 @@
 {
   "presets": [
-      ["es2015", { "modules": false }]
+      ["es2015"]
   ],
   "plugins": [
     "transform-async-to-generator",
     "transform-class-properties",
     "transform-object-rest-spread",
-    "transform-react-jsx",
     "transform-flow-strip-types",
     ["module-resolver", {
       "root": ["./src"],
       "alias": {
         "src": "./src/js"
       }
-    }],
-    "react-hot-loader/babel"
+    }]
   ]
 }
